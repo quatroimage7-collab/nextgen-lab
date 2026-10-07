@@ -36,3 +36,48 @@
 .reception-promo{margin-top:2rem;padding:2rem 2.5rem;border:1px solid var(--line);border-radius:18px;background:#f1f7f4;display:flex;align-items:center;justify-content:space-between;gap:2rem}.reception-promo h2{font-size:1.55rem;margin-bottom:.5rem}.reception-promo .eyebrow{margin-bottom:.5rem}.reception-promo .button{flex-shrink:0}.site-header nav a.reception-nav{color:#126b59;font-weight:700}
 @media(min-width:901px) and (max-width:1240px){.site-header{gap:1rem;padding-left:2%;padding-right:2%}.site-header nav{gap:.8rem}.site-header nav a{font-size:.8rem}.brand-name{font-size:.85rem}.brand-logo{width:42px;height:auto}.brand{gap:.6rem}}
 @media(max-width:650px){.reception-promo{display:block;padding:1.5rem}.reception-promo .button{margin-top:1rem}}
+
+/* Responsive layout refinements */
+img,video{max-width:100%}
+.about>*,.panel-grid>*,.join-grid>*,.two-col>*,.profile>*,.research-detail>*,.media-grid>*{min-width:0}
+.contact-panel a,.record a,.paper-card a{overflow-wrap:anywhere}
+@media(max-width:900px){
+  .site-header nav.open{max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
+  .site-header nav a{min-height:48px;display:flex;align-items:center}
+  .hero-actions{flex-wrap:wrap}
+}
+@media(max-width:650px){
+  .wrap{width:calc(100% - 40px)}
+  .hero{min-height:780px;height:auto;max-height:none;padding-bottom:180px}
+  .hero-content{padding-top:9rem}
+  .hero h1{font-size:clamp(1.7rem,7.2vw,2.3rem);line-height:1.65;overflow-wrap:anywhere}
+  .hero-desc{font-size:.9375rem;white-space:normal;max-width:100%}
+  .hero-actions{gap:1rem 1.3rem}
+  .hero-bottom{left:20px;bottom:2.5rem;width:calc(100% - 40px)}
+  .section{padding:3.5rem 0}
+  h2{font-size:clamp(1.6rem,6.2vw,2.1rem);line-height:1.65}
+  .section-heading{margin-bottom:2rem}
+  .about-copy h3{font-size:1.5rem}
+  .research-panel{padding:1.25rem;border-radius:12px}
+  .panel-top{flex-wrap:wrap;gap:.5rem}
+  .panel-grid h3{font-size:1.65rem}
+  .button{min-height:48px}
+  .lang-button,.menu-button{min-width:44px;min-height:44px}
+  .media-card video{width:100%;height:auto;display:block}
+  .page-heading h1{font-size:clamp(2rem,8vw,2.65rem)}
+  .footer-bottom p{overflow-wrap:anywhere}
+}
+@media(max-width:420px){
+  .site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;padding:1rem 16px;gap:.6rem}
+  .site-header nav{grid-column:1 / -1}
+  .brand{min-width:0;gap:.4rem}
+  .brand-logo{width:30px;height:32px}
+  .brand-name{font-size:.72rem;letter-spacing:0}
+  .brand-name small{display:none}
+  .header-controls{gap:.3rem}
+  .lang-button,.menu-button{font-size:.7rem;padding:.4rem .5rem}
+  .hero-content{padding-top:7.5rem}
+  .hero-lab{font-size:.85rem;letter-spacing:.03em}
+  .hero-affiliation{max-width:9rem}
+  .reception-promo{padding:1.3rem}
+}
