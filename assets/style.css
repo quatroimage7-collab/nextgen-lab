@@ -31,3 +31,8 @@
 .site-footer{background:#eef5f1}.footer-philosophy{color:#234d45}.footer-bottom{border-color:#cadbd2}.record-number{color:#2f7967}.record-badge{border-color:#b2cfc3}.skip-link{color:#fff}.paper-card{background:#f8faf9}.media-card{background:#f7faf8}.contact-panel{background:#f4f8f6}.contact-pending{border-color:var(--line)}
 @media(max-width:900px){.site-header nav.open{background:#fff;border-color:var(--line)}.site-header.menu-open{background:#fff}}
 @media(max-width:650px){.hero-image{background-color:#fff}.hero-shade{background:linear-gradient(180deg,#fff 0%,#fffffff5 28%,#ffffffd9 43%,#ffffff40 65%,#ffffff08 77%,#fff 100%),linear-gradient(90deg,#ffffff65,transparent)}.hero-desc{max-width:23rem}.hero-affiliation{background:#ffffffe8}.concept-note{font-size:.625rem}.hero h1{color:#153630}}
+
+/* Partner-company reception entry points */
+.reception-promo{margin-top:2rem;padding:2rem 2.5rem;border:1px solid var(--line);border-radius:18px;background:#f1f7f4;display:flex;align-items:center;justify-content:space-between;gap:2rem}.reception-promo h2{font-size:1.55rem;margin-bottom:.5rem}.reception-promo .eyebrow{margin-bottom:.5rem}.reception-promo .button{flex-shrink:0}.site-header nav a.reception-nav{color:#126b59;font-weight:700}
+@media(min-width:901px) and (max-width:1240px){.site-header{gap:1rem;padding-left:2%;padding-right:2%}.site-header nav{gap:.8rem}.site-header nav a{font-size:.8rem}.brand-name{font-size:.85rem}.brand-logo{width:42px;height:auto}.brand{gap:.6rem}}
+@media(max-width:650px){.reception-promo{display:block;padding:1.5rem}.reception-promo .button{margin-top:1rem}}

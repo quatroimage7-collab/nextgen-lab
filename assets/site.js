@@ -28,9 +28,12 @@
     if(hero)hero.setAttribute('aria-label',language==='ja'?'ロボット、ドローン、レーザ彫刻機を描いたAI生成の研究コンセプト画像':'AI-generated research concept showing a robot, drone and laser engraving system');
     try{localStorage.setItem('nextgen-language',language);}catch{}
   }
+  if (!languageButton) { // The reception form uses Japanese only.
+    document.querySelectorAll('[data-ja]').forEach(el => el.textContent = el.dataset.ja);
+  }
   let saved='ja';try{saved=localStorage.getItem('nextgen-language')||'ja';}catch{}
-  setLanguage(saved);
-  languageButton.addEventListener('click',()=>setLanguage(language==='ja'?'en':'ja'));
+  if (languageButton) setLanguage(saved);
+  languageButton?.addEventListener('click',()=>setLanguage(language==='ja'?'en':'ja'));
   const menu=document.querySelector('.menu-button'), nav=document.querySelector('nav'), header=document.querySelector('.site-header');
   function closeMenu(){menu.setAttribute('aria-expanded','false');nav.classList.remove('open');header.classList.remove('menu-open');}
   menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);header.classList.toggle('menu-open',open);});
