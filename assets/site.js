@@ -1,5 +1,7 @@
 (() => {
   const cfg = window.LAB_CONFIG || {};
+  const originalTitle = document.title;
+  document.querySelectorAll('[data-booking]').forEach(a => { if (cfg.bookingUrl?.startsWith('https://')) a.href = cfg.bookingUrl; });
   const titleJa = cfg.labNameJa || '次世代工学研究室';
   const titleEn = cfg.labNameEn || 'Next-Generation Engineering Laboratory';
   document.querySelectorAll('[data-ja]').forEach(el => {
@@ -23,12 +25,7 @@
     languageButton.setAttribute('aria-label',language==='ja'?'Switch language to English':'日本語に切り替え');
     document.querySelector('nav').setAttribute('aria-label',language==='ja'?'メインナビゲーション':'Main navigation');
     const slug=location.pathname.split('/').pop().replace('.html','')||'index';
-    document.title = slug === 'index'
-  ? (language === 'ja'
-      ? '三条市立大学 次世代工学研究室｜佐藤敦・AIと機械工学'
-      : 'Next-Generation Engineering Laboratory | Atsushi Sato | Sanjo City University')
-  : (titles[slug] || titles.index)[language === 'ja' ? 0 : 1]
-    + ' | ' + (language === 'ja' ? titleJa : titleEn);
+    document.title=language==='ja'?originalTitle:(titles[slug]||titles.index)[language==='ja'?0:1]+' | '+(language==='ja'?titleJa:titleEn);
     const hero=document.querySelector('.hero-image');
     if(hero)hero.setAttribute('aria-label',language==='ja'?'ロボット、ドローン、レーザ彫刻機を描いたAI生成の研究コンセプト画像':'AI-generated research concept showing a robot, drone and laser engraving system');
     try{localStorage.setItem('nextgen-language',language);}catch{}

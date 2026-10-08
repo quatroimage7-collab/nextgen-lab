@@ -1,0 +1,54 @@
+一般向け予約・お問い合わせへの更新
+
+元ファイル：今回添付された nextgen-lab-renewal-motaro(3).zip
+
+変更ファイル
+・index.html、research.html、members.html、publications.html、students.html、contact.html、reception.html
+・assets/config.js、assets/site.js、assets/style.css、assets/reception.js
+・README.md、RECEPTION_SETUP.md
+追加：UPDATE_NOTES.txt
+
+主な変更
+・予約＝ピンク＋カレンダー、問い合わせ＝緑＋メールのSVGアイコンに統一。
+・トップのファーストビューに研究概要、一般向けの相談案内、2つのCTAを追加。
+・全7ページのヘッダー、スマートフォン下部の固定CTAを整備。
+・固定CTAの高さとセーフエリアに合わせたページ末尾の余白を確保。
+・実習専用の受付を一般向け相談メール作成フォームに変更。所属は任意。
+・写真・動画・PDF・フォント・研究紹介本文を維持。
+
+予約URL設定箇所
+https://cal.com/佐藤敦-u9lood/reservation
+・assets/config.js の bookingUrl
+・全7ページの data-booking 付きリンク（ヘッダー・モバイル固定CTA）
+・index.html のファーストビュー・下部CTA
+・contact.html の相談案内
+・reception.html の予約案内カード
+HTMLにも直接URLを設定し、JavaScript無効時も利用可能。
+
+問い合わせ導線
+・全7ページのヘッダー・フッター・モバイル固定CTAから contact.html へ。
+・トップのファーストビュー・下部、学生ページの既存導線も緑へ統一。
+・contact.html から既存メールアドレス、reception.html#report-form へ。
+・フォームは文面を生成する方式で、送信は利用者のメールアプリで完了する。
+
+SEO
+・index.html、contact.html、reception.html のmeta descriptionを一般向けに更新。
+・reception.htmlのtitleを「ご相談・お問い合わせ | 次世代工学研究室」に変更。
+・assets/site.jsで日本語titleが初期HTMLの設定を保持するよう変更。
+・その他の既存title、meta情報、検索エンジン確認用HTMLを維持。
+・添付ZIPにはOGP、構造化データ、canonical、sitemap.xml、robots.txtは含まれていない。
+  公開サイトに別途追加済みのものがある場合は、それらの設定・ファイルを維持すること。
+
+検証
+・Chromiumで全7ページを375/768/1024/1440px幅で表示し、横はみ出しなし。
+・主要ページのPC表示、全ページのモバイル表示を画像確認。
+・内部リンク、ページ内アンカー、画像・動画・PDFの参照先：欠損なし。
+・予約リンクは全箇所で指定URLと一致。
+・JavaScriptエラーなし、メニュー開閉・英語切替を確認。
+・所属未入力でも相談文面が生成されること、入力変更時のプレビュー無効化を確認。
+・外部サービス側での実予約・メール送信は実施していない。
+
+GitHub Pagesへの反映
+ZIPを展開し、中身のindex.htmlと他のHTML、assets、papers等を既存リポジトリの公開フォルダに配置してください。
+ZIP自体をアップロードするだけではページは更新されません。
+ビルド処理やサーバー側プログラムは不要です。

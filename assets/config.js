@@ -5,7 +5,7 @@ window.LAB_CONFIG = {
   affiliationJa: '三条市立大学',
   affiliationEn: 'Sanjo City University',
   // 公開済みの予約ページの共有URLを指定すると、空き枠予約が有効になります。
-  bookingUrl: '',
+  bookingUrl: 'https://cal.com/佐藤敦-u9lood/reservation',
   email: 'sato.atsushi@sanjo-u.ac.jp',
   addressJa: '〒955-0091 新潟県三条市上須頃5002番地5',
   addressEn: '5002-5 Kamisugoro, Sanjo, Niigata 955-0091, Japan'
