@@ -1,0 +1,18 @@
+/* Booking and contact actions. Keep after the page styles. */
+body{padding-bottom:0}
+html{scroll-padding-bottom:24px}
+a.button.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:auto;height:auto;min-height:48px;padding:12px 22px;border:1px solid transparent;border-radius:10px;font-size:15px;font-weight:600;line-height:1.5;white-space:nowrap;word-break:normal;overflow-wrap:normal;text-decoration:none;flex-shrink:0}
+a.button.cta>span{display:block;white-space:nowrap;word-break:normal;overflow-wrap:normal}
+a.button.cta svg{display:block;width:22px;height:22px;flex:0 0 22px}
+a.button.cta-booking{background:#b52c65;border-color:#b52c65;color:#fff}
+a.button.cta-contact{background:#17694c;border-color:#17694c;color:#fff}
+a.button.cta-booking:hover{background:#942151;border-color:#942151}
+a.button.cta-contact:hover{background:#105139;border-color:#105139}
+.site-header nav a.cta{padding:10px 16px;min-height:44px;font-size:13px}
+.site-header nav a.cta::after{display:none}
+.hero-consult{margin-top:24px;margin-bottom:32px}
+.hero-consult .cta-pair{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+.hero-consult a.cta{min-width:190px;min-height:54px}
+.hero-consult .cta-hint{margin-top:14px!important}
+@media(max-width:1000px){.hero-consult a.cta{flex:0 1 auto}.site-header nav a.cta{width:100%}}
+@media(max-width:480px){.hero-consult .cta-pair{display:grid;grid-template-columns:1fr;gap:10px}.hero-consult a.cta{width:100%;min-width:0}.hero-consult .cta-hint{font-size:12px!important}}
