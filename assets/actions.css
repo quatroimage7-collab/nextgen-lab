@@ -16,3 +16,7 @@ a.button.cta-contact:hover{background:#105139;border-color:#105139}
 .hero-consult .cta-hint{margin-top:14px!important}
 @media(max-width:1000px){.hero-consult a.cta{flex:0 1 auto}.site-header nav a.cta{width:100%}}
 @media(max-width:480px){.hero-consult .cta-pair{display:grid;grid-template-columns:1fr;gap:10px}.hero-consult a.cta{width:100%;min-width:0}.hero-consult .cta-hint{font-size:12px!important}}
+
+/* v3: remove lower-page duplicate actions, contact stays at the far right. */
+.home-contact,.mobile-cta,.inline-cta,.site-footer .cta{display:none!important}
+@media(min-width:1001px){.site-header .header-controls{margin-left:auto}.site-header nav{margin-left:0}}

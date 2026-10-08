@@ -100,3 +100,14 @@
   new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
   sync();
 })();
+
+// Also clean up older HTML when only the shared assets have been refreshed.
+(() => {
+ document.querySelectorAll('.home-contact,.mobile-cta,.inline-cta,.site-footer .cta').forEach(el=>el.remove());
+ const nav=document.querySelector('.site-header nav');
+ if(!nav)return;
+ const booking=nav.querySelector('.cta-booking'),contact=nav.querySelector('.cta-contact');
+ if(booking&&contact)nav.append(booking,contact);
+ const controls=document.querySelector('.site-header .header-controls');
+ if(controls)nav.before(controls);
+})();
