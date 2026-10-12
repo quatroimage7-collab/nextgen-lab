@@ -1,7 +1,7 @@
 Outlook AI返信下書き：Azure未契約からの導入
 第3版 / 2026-10-12
 
-このREADMEの「導入の順番」から確認してください。
+最初にOutlook_AI_Campus_Guide.pdfを開いてください。
 Azureアカウントをまだ持っていない大学職員の方を対象にしています。
 
 今回の変更
@@ -17,8 +17,10 @@ Azureアカウントをまだ持っていない大学職員の方を対象にし
 - 初期状態はDisabled。本人のOutlookへ接続した後、有効化して利用。
 
 同梱ファイル
+Outlook_AI_Campus_Guide.pdf：図解28ページ
 azuredeploy.json：Logic Apps Consumption用の配布設定
-validation.txt：元資料に記載された静的検証結果と未検証事項
+見積依頼文.txt：提供元への問い合わせ文面
+検証結果.txt：静的検証結果と未検証事項
 README.txt：このファイル
 
 導入の順番
@@ -73,6 +75,6 @@ GetSenderは受信メールのfrom.emailAddress.nameを取得します。連絡�
 重要：この第3版のテンプレートは新規作成用です。既存のnextへそのまま上書きしないでください。
 添付された個人用エクスポートは配布ZIPに含めていません。署名はOutlookの設定からではなく導入時のSignature Linesから挿入します。
 
-確認用ファイル
-checklist.txt：契約から動作確認までの記録用
-
+追加ファイル
+導入チェックリスト.txt：契約から動作確認までの記録用
+変更点.txt：元データとの差分
