@@ -1,0 +1,61 @@
+/* Shared typography: loaded after page-specific styles. */
+body{font-size:17px;line-height:1.9}
+main p,main li,main dd{line-height:1.95;line-break:strict;overflow-wrap:break-word}
+main p:not(.eyebrow):not(.hero-ai-director):not(.ai-director-role){font-size:1.0625rem}
+main p[data-readable-paragraph]{white-space:pre-line}
+main :is(h1,h2,h3){line-break:strict;word-break:normal;text-wrap:balance;letter-spacing:.015em}
+@supports(word-break:auto-phrase){html:lang(ja) main :is(h1,h2,h3){word-break:auto-phrase}}
+main h2{font-size:clamp(1.65rem,2.7vw,2.75rem);line-height:1.6}
+main h3{font-size:clamp(1.125rem,1.5vw,1.4rem);line-height:1.7}
+.page-heading h1{font-size:clamp(2.25rem,4.7vw,4.5rem);line-height:1.4}
+.index .photo-hero h1{font-size:clamp(2rem,4.8vw,4.75rem);line-height:1.5}
+.home-ai-director-copy h2{font-size:clamp(1.5rem,2.5vw,2.25rem);line-height:1.65;letter-spacing:0;white-space:pre-line}
+.ai-director-title{font-size:clamp(1.65rem,3vw,2.75rem);line-height:1.6;letter-spacing:0;white-space:pre-line}
+.ai-director-info h3,.profile-name h2{font-size:clamp(2rem,3vw,3rem);line-height:1.5}
+.home-motaro-copy h2{font-size:clamp(1.65rem,2.8vw,2.75rem);line-height:1.65}
+main .eyebrow{font-size:.8125rem;line-height:1.8;letter-spacing:.1em}
+main :is(.source-note,.paper-meta,.technical,.record-year,.concept-caption,.film-label,.news-scroll-hint),
+main p:is(.home-ai-director-note,.ai-director-note,.consult-note,.cta-hint),
+main p[style*="font-size"],main time,main small{font-size:.875rem!important;line-height:1.9}
+main .text-link,main .quiet-link,main .pill,main .button{font-size:1rem;line-height:1.7}
+main .record h3{font-size:1.125rem;line-height:1.8;overflow-wrap:break-word}
+main .record .muted{font-size:1rem}
+main .detail-line h3{font-size:1.0625rem}
+main .paper-card h3{font-size:1.25rem;line-height:1.8}
+main .project-card p,main .field-card p{font-size:1.0625rem}
+main .detail-copy>p,main .two-col p,main .ai-director-desc{max-width:42em}
+main .news-scroll article>p{max-width:58em}
+main :is(input,textarea,select){font-size:1rem;line-height:1.7}
+main label,main summary{font-size:1rem;line-height:1.8}
+main li+li{margin-top:.5em}
+.site-footer p,.footer-bottom,.footer-top .muted{font-size:.875rem;line-height:1.85}
+.site-header nav a,.site-header nav a.cta{font-size:.9375rem}
+.brand-name{line-height:1.6}
+@media(min-width:1001px) and (max-width:1250px){
+ .site-header nav{gap:10px}
+ .site-header nav a,.site-header nav a.cta{font-size:.875rem}
+ .site-header nav a.cta{padding-inline:10px}
+}
+@media(max-width:1000px){
+ .home-ai-director{grid-template-columns:1fr;gap:36px}
+ .home-ai-director-image{order:-1;max-width:720px;width:100%;margin-inline:auto}
+ .home-ai-director-copy{max-width:44rem}
+ .home-ai-director-copy h2{font-size:clamp(1.5rem,3.5vw,2rem)}
+}
+@media(max-width:700px){
+ body{font-size:16px}
+ main p:not(.eyebrow):not(.hero-ai-director):not(.ai-director-role),
+ main .home-motaro-description,main .project-card p,main .field-card p{font-size:1rem;line-height:1.95}
+ main h2,.section-heading h2,.vision-copy h2,.index .visual-research-copy h2{font-size:1.65rem;line-height:1.65}
+ .home-ai-director-copy h2{font-size:clamp(1.2rem,5.1vw,1.75rem);line-height:1.75;letter-spacing:0}
+ .ai-director-title{font-size:clamp(1.2rem,5.1vw,1.75rem);line-height:1.75}
+ .index .photo-hero h1{font-size:clamp(1.65rem,6.7vw,2.4rem);line-height:1.6}
+ .home-motaro-copy h2{font-size:clamp(1.45rem,5.8vw,1.9rem);line-height:1.65}
+ .site-header nav a,.site-header nav a.cta{font-size:1rem}
+ .record{gap:12px}
+ .news-scroll{padding-inline:16px}
+ .news-scroll h3{font-size:1.125rem}
+ .news-scroll .button{white-space:normal;text-align:center;padding-inline:18px}
+ .footer-top h2{font-size:1.25rem;line-height:1.7}
+}
+@media(max-width:380px){.brand-name{font-size:.75rem}.site-header{gap:6px}.header-controls{gap:4px}}
