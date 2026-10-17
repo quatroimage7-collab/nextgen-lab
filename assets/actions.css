@@ -19,4 +19,4 @@ a.button.cta-contact:hover{background:#105139;border-color:#105139}
 
 /* v3: remove lower-page duplicate actions, contact stays at the far right. */
 .home-contact,.mobile-cta,.inline-cta,.site-footer .cta{display:none!important}
-@media(min-width:1001px){.site-header .header-controls{margin-left:auto}.site-header nav{margin-left:0}}
+@media(min-width:1001px){.site-header .header-controls{margin-left:0;flex-shrink:0}.site-header nav{margin-left:auto}}

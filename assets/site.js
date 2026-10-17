@@ -109,5 +109,9 @@
  const booking=nav.querySelector('.cta-booking'),contact=nav.querySelector('.cta-contact');
  if(booking&&contact)nav.append(booking,contact);
  const controls=document.querySelector('.site-header .header-controls');
- if(controls)nav.before(controls);
+ if(controls){
+   nav.after(controls);
+   const menu=controls.querySelector(".menu-button");
+   if(menu)controls.prepend(menu);
+ }
 })();
