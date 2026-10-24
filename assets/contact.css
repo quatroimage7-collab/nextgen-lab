@@ -1,0 +1,35 @@
+/* Scoped to the inquiry form; shared typography and navigation remain unchanged. */
+.inquiry-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:7%;padding-block:32px 80px;border-bottom:1px solid var(--line)}
+.inquiry-intro h2{font-size:clamp(1.5rem,2.3vw,2.25rem);margin-bottom:24px}
+#contact-form{min-width:0;scroll-margin-top:32px}
+#contact-form fieldset{border:0;padding:0;margin:0;min-width:0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-field{margin-top:24px;min-width:0}
+.contact-field label{display:block;margin-bottom:10px;font-weight:500}
+.contact-field :is(input,select,textarea){width:100%;max-width:100%;border:1px solid #aab3b7;border-radius:10px;background:#fff;color:var(--ink);padding:13px 15px;font:inherit;font-size:16px;min-height:50px}
+.contact-field textarea{resize:vertical;min-height:170px}
+#contact-form :is(input,select,textarea,button):focus-visible{outline:3px solid #17694c;outline-offset:3px}
+#contact-form [aria-invalid=true]{border-color:#a32626}
+#contact-form .contact-help,#contact-form .field-error{font-size:.875rem;margin-top:8px;line-height:1.8}
+.contact-help{color:var(--muted)}
+.field-error{color:#a32626}
+.field-error:empty{display:none}
+.contact-status{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:24px;overflow-wrap:anywhere}
+.contact-status[data-state=success]{background:#eef7f1;border-color:#92b49f;color:#105139}
+.contact-status[data-state=error]{background:#fff5f3;border-color:#d7a29b;color:#8b2424}
+.contact-privacy{padding:22px;background:var(--surface);border-radius:12px;margin-top:28px}
+.contact-privacy h3{font-size:1rem;margin-bottom:12px}
+#contact-form .contact-privacy p{font-size:.875rem;line-height:1.9}
+.contact-privacy a{text-decoration:underline;text-underline-offset:3px}
+.contact-consent{display:flex;align-items:flex-start;gap:12px;margin-top:24px;cursor:pointer}
+.contact-consent input{width:20px;height:20px;flex:0 0 20px;margin-top:5px;accent-color:#17694c}
+#contact-form button{margin-top:26px;border-radius:10px;min-height:50px;padding:13px 26px;white-space:normal;transition:background .2s,transform .2s}
+#contact-form button:not(:disabled):hover{transform:translateY(-1px)}
+#contact-form button:disabled{cursor:not-allowed;background:#e7ebea;color:#53615b;border-color:#cbd2ce;opacity:1}
+#contact-form :is(input,textarea,select):disabled{background:#f6f7f7;color:#68716e}
+#contact-form [hidden]{display:none!important}
+.contact-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.contact-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:1000px){.inquiry-section{grid-template-columns:1fr;gap:32px}.inquiry-intro{max-width:42rem}}
+@media(max-width:600px){.contact-grid{grid-template-columns:1fr;gap:0}.inquiry-section{padding-bottom:48px}.contact-privacy{padding:18px}#contact-form button{width:100%}}
+@media(prefers-reduced-motion:reduce){#contact-form button{transition:none}#contact-form button:not(:disabled):hover{transform:none}}
