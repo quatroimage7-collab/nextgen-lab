@@ -59,3 +59,42 @@ main li+li{margin-top:.5em}
  .footer-top h2{font-size:1.25rem;line-height:1.7}
 }
 @media(max-width:380px){.brand-name{font-size:.75rem}.site-header{gap:6px}.header-controls{gap:4px}}
+
+/* Shared text sizing: avoid Safari automatic inflation while keeping zoom available. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+/* Homepage hero only: establish a clear type hierarchy without changing images or other pages. */
+.index .photo-hero .hero-title-row{align-items:end;gap:18px 28px;margin:22px 0 32px}
+.index .photo-hero #hero-title{font-size:clamp(2.15rem,4.15vw,4.35rem);font-weight:700;line-height:1.34;letter-spacing:0}
+.index .photo-hero #hero-title>span:last-child{margin-left:0}
+.index .photo-hero .hero-side{padding-bottom:4px}
+.index .photo-hero .hero-side p{font-size:.78rem;line-height:1.6;letter-spacing:.1em}
+.index .photo-hero .hero-consult{max-width:860px;margin-bottom:36px}
+.index .photo-hero .hero-consult .hero-question{font-size:clamp(1.1875rem,1.9vw,1.5rem);font-weight:700;line-height:1.75;letter-spacing:.01em;color:#20272c;margin:0 0 20px;white-space:normal;overflow-wrap:break-word}
+.index .photo-hero .hero-consult .hero-explanation{font-size:clamp(1.0625rem,1.4vw,1.1875rem);font-weight:400;line-height:1.95;color:#33404a;max-width:45em;margin:0;white-space:normal}
+.index .photo-hero .hero-consult .hero-future{font-size:clamp(1.1875rem,1.9vw,1.5rem);font-weight:700;line-height:1.75;letter-spacing:.01em;margin:12px 0 0;color:#20272c}
+.index .photo-hero .hero-consult .hero-mission{font-size:clamp(1.0625rem,1.3vw,1.1875rem);font-weight:500;line-height:1.9;max-width:42em;margin:26px 0 0;padding-top:22px;border-top:1px solid #dce0e1;white-space:normal}
+.index .photo-hero .hero-consult .consult-note{margin-top:18px;max-width:50em;line-height:1.9;color:#657076}
+.index .photo-hero .hero-consult .cta-pair{margin-top:22px}
+.index .photo-hero .hero-consult .cta-hint{max-width:55em}
+@media(max-width:700px){
+  .index .photo-hero .hero-title-row{margin:20px 0 30px;gap:12px}
+  .index .photo-hero #hero-title{font-size:clamp(1.75rem,6.8vw,2.35rem);line-height:1.42;letter-spacing:0}
+  .index .photo-hero .hero-side p{font-size:.75rem;letter-spacing:.06em}
+  .index .photo-hero .hero-consult{margin-bottom:28px}
+  .index .photo-hero .hero-consult .hero-question{font-size:1.1875rem;line-height:1.75;letter-spacing:.01em;white-space:normal;margin-bottom:18px}
+  .index .photo-hero .hero-consult .hero-explanation{font-size:1rem;line-height:1.9;white-space:pre-line}
+  .index .photo-hero .hero-consult .hero-future{font-size:1.1875rem;line-height:1.75;margin-top:14px}
+  .index .photo-hero .hero-consult .hero-mission{font-size:1rem;line-height:1.9;white-space:normal;margin-top:24px;padding-top:18px}
+  .index .photo-hero .hero-consult .consult-note{margin-top:16px}
+}
+@media(max-width:360px){
+  .index .photo-hero #hero-title{font-size:1.72rem}
+}
+
+.index .photo-hero .hero-consult :is(.hero-question,.hero-future){text-wrap:balance;line-break:strict;word-break:normal}
+.index .photo-hero .hero-consult :is(.hero-explanation,.hero-mission){line-break:strict;word-break:normal;overflow-wrap:break-word}
+
+/* Let paper-card text shrink within the mobile grid instead of widening it. */
+.paper-grid,.paper-card,.paper-card>*{min-width:0}
+.paper-card .eyebrow{overflow-wrap:break-word}
